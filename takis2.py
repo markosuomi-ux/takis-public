@@ -13,17 +13,22 @@ st.set_page_config(
     layout="centered"
 )
 
-# Tyylittelyä
+# Tyylittelyä, joka toimii sekä tummassa että vaaleassa tilassa
 st.markdown("""
     <style>
-    .main {
-        background-color: #f5f5f5;
-    }
+    /* Tehdään expander-laatikoista siistimpiä ilman että pakotetaan taustaväriä */
     .stExpander {
-        background-color: white;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
+        border: 1px solid #cccccc !important;
+        border-radius: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* Varmistetaan että teksti on aina kontrastissa taustan kanssa */
+    /* Streamlit hoitaa tämän yleensä itse, kun emme pakota taustavärejä */
+    
+    /* Lisätään hieman ilmaa mobiilikäyttöä varten */
+    .stMarkdown {
+        line-height: 1.6;
     }
     </style>
     """, unsafe_allow_html=True)
