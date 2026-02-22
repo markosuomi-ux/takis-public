@@ -1,4 +1,4 @@
 streamlit==1.54.0
 feedparser==6.0.10
 sentence-transformers==3.0.1
-torch==2.1.2
+torch==2.5.0
